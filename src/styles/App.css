@@ -3,7 +3,7 @@ body, html, #root, .App {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #000;
   overflow: hidden;
 }
@@ -40,19 +40,25 @@ body, html, #root, .App {
   color: white;
 }
 
-/* Logo animation */
+/* Rotating Logo Animation */
+@keyframes hourglassRotate {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .logo {
   width: 75px;
   margin-bottom: 30px;
-  animation: fadeIn 2s ease-out;
+  animation: hourglassRotate 3s linear infinite;
 }
 
 /* Subheadline */
 .subheadline {
   font-size: 1.5rem;
   color: #bbb;
-  margin-bottom: 0;   /* Add this to eliminate space */
-  margin-top: 0;      /* Remove the upward spacing */
+  margin-bottom: 0;
+  margin-top: 0;
   max-width: 500px;
   animation: fadeInUp 1.8s ease-out;
 }
@@ -60,8 +66,8 @@ body, html, #root, .App {
 /* Headline */
 .headline {
   font-size: 5.8rem;
-  font-weight: lighter;
-  color: #FFF; /* Blue */
+  font-weight: 600;
+  color: #FFF;
   animation: fadeInUp 1.4s ease-out;
   margin-top: -10px;
 }
@@ -69,12 +75,12 @@ body, html, #root, .App {
 /* Entrance animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .social-icons {
@@ -86,73 +92,10 @@ body, html, #root, .App {
 }
 .social-icons a.icon {
   margin: 0 12px;
-  color: #333; /* default icon color */
+  color: #333;
   transition: color 0.3s ease;
 }
 
-/* Hover colors by brand */
-
-/* Facebook */
-.social-icons a.facebook:hover {
-  color: #1877F2;
-}
-
-/* LinkedIn */
-.social-icons a.linkedin:hover {
-  color: #0A66C2;
-}
-
-/* Twitter */
-.social-icons a.twitter:hover {
-  color: #1DA1F2;
-}
-
-/* Instagram (approximate pink) */
-.social-icons a.instagram:hover {
-  color: #E1306C;
-}
-
-/* Reddit */
-.social-icons a.reddit:hover {
-  color: #FF4500;
-}
-
-/* YouTube */
-.social-icons a.youtube:hover {
-  color: #FF0000;
-}
-
-/* Pinterest */
-.social-icons a.pinterest:hover {
-  color: #BD081C;
-}
-
-/* Discord */
-.social-icons a.discord:hover {
-  color: #5865F2;
-}
-
-/* WhatsApp */
-.social-icons a.whatsapp:hover {
-  color: #25D366;
-}
-
-/* Messenger */
-.social-icons a.messenger:hover {
-  color: #0084FF;
-}
-
-/* Stack Overflow */
-.social-icons a.stackoverflow:hover {
-  color: #F48024;
-}
-
-/* Kaggle */
-.social-icons a.kaggle:hover {
-  color: #20BEFF;
-}
-
-/* GitHub */
-.social-icons a.github:hover {
-  color: #FFF;
+.social-icons a.icon:hover {
+  color: #FFFFFF; /* Universal white hover */
 }

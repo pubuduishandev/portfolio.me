@@ -1,0 +1,158 @@
+/* Base Reset */
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Gradient Animated Background */
+.background-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(0, 119, 255, 0.2), rgba(255, 255, 0, 0.1), rgba(255, 255, 255, 0.05));
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  z-index: 0;
+  filter: blur(60px);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Main content layer */
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+
+/* Logo animation */
+.logo {
+  width: 75px;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Subheadline */
+.subheadline {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-bottom: 0;   /* Add this to eliminate space */
+  margin-top: 0;      /* Remove the upward spacing */
+  max-width: 500px;
+  animation: fadeInUp 1.8s ease-out;
+}
+
+/* Headline */
+.headline {
+  font-size: 5.8rem;
+  font-weight: lighter;
+  color: #FFF; /* Blue */
+  animation: fadeInUp 1.4s ease-out;
+  margin-top: -10px;
+}
+
+/* Entrance animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.social-icons {
+  margin-top: -50px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.social-icons a.icon {
+  margin: 0 12px;
+  color: #333; /* default icon color */
+  transition: color 0.3s ease;
+}
+
+/* Hover colors by brand */
+
+/* Facebook */
+.social-icons a.facebook:hover {
+  color: #1877F2;
+}
+
+/* LinkedIn */
+.social-icons a.linkedin:hover {
+  color: #0A66C2;
+}
+
+/* Twitter */
+.social-icons a.twitter:hover {
+  color: #1DA1F2;
+}
+
+/* Instagram (approximate pink) */
+.social-icons a.instagram:hover {
+  color: #E1306C;
+}
+
+/* Reddit */
+.social-icons a.reddit:hover {
+  color: #FF4500;
+}
+
+/* YouTube */
+.social-icons a.youtube:hover {
+  color: #FF0000;
+}
+
+/* Pinterest */
+.social-icons a.pinterest:hover {
+  color: #BD081C;
+}
+
+/* Discord */
+.social-icons a.discord:hover {
+  color: #5865F2;
+}
+
+/* WhatsApp */
+.social-icons a.whatsapp:hover {
+  color: #25D366;
+}
+
+/* Messenger */
+.social-icons a.messenger:hover {
+  color: #0084FF;
+}
+
+/* Stack Overflow */
+.social-icons a.stackoverflow:hover {
+  color: #F48024;
+}
+
+/* Kaggle */
+.social-icons a.kaggle:hover {
+  color: #20BEFF;
+}
+
+/* GitHub */
+.social-icons a.github:hover {
+  color: #FFF;
+}
